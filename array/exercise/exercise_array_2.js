@@ -9,7 +9,6 @@ function mergeSortedArrays(value, anotherValue) {
     let j = 0
 
     while(i < value.length && j < anotherValue.length) {
-        if(value.length <= anotherValue.length) {
             if (value[i] < anotherValue[j]) {
                 result.push(value[i])
                 i++
@@ -17,15 +16,6 @@ function mergeSortedArrays(value, anotherValue) {
                 result.push(anotherValue[j])
                 j++
             }
-        } else {
-            if (anotherValue[j] < value[i] ) {
-                result.push(anotherValue[j])
-                j++
-            } else {
-                result.push(value[i])
-                i++
-            }
-        }
     }
 
     while(i < value.length) {
